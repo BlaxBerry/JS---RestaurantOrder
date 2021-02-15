@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+
+/* header start */
+
+.header {
+    line-height: 50px;
+    height: 50px;
+    background-color: rgb(40, 40, 40);
+    overflow: hidden;
+}
+
+.header .container ul li {
+    float: left;
+}
+
+#cart {
+    float: right;
+    padding: 0 20px;
+    background-color: crimson;
+}
+
+.header .container a {
+    position: relative;
+    display: block;
+    height: 50px;
+    padding: 0 15px;
+    color: white;
+}
+
+
+/* hover underline */
+
+.header .container a::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 2px solid crimson;
+}
+
+.header .container li:first-child a::after {
+    display: block;
+}
+
+.header .container a:hover::after {
+    display: block;
+}
+
+
+/* header end */
+
+
+/* container start */
+
+.container {
+    width: 750px;
+    margin: 0 auto;
+}
+
+
+/* when < 768px */
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* when >= 768 */
+
+@media screen and(min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+/* when >= 992px */
+
+@media screen and(min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* when >= 1200px */
+
+@media screen and(min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* container end */
